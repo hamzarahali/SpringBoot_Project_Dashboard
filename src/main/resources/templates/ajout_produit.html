@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ajout des clients</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
+<link rel="stylesheet" type="text/css" th:href="@{/css/marge.css}"/>
+
+</head>
+<body>
+
+<h1> <center> Ajout d'un article </center></h1>
+
+<form th:action="@{sauver}" method="post" th:object="${un_article}">
+
+<div class="marges col-md-3">
+
+<div class="form-group">
+<label class="control-label"> Title : </label>
+<input type="text" size="20" th:field="${un_article.title}"  class="form-control"/>
+</div>
+
+<div class="file-field">
+<div class="btn btn-primary btn-sm float-left">
+<span>Choose image</span>
+<input type="file" th:field="${un_article.img}" >
+</div>
+</div>
+
+
+<div class="form-group">
+<label class="control-label"> Description : </label>
+<input type="text" th:field="${un_article.description}" class="form-control"/>
+</div>
+
+<div class="form-group">
+<label class="control-label"> Price : </label>
+<input type="text" th:field="${un_article.price}" class="form-control"/>
+</div>
+
+<div>
+<button type="submit" class="form-control">Ajouter</button>
+</div>
+
+</div>
+
+</form>
+
+</body>
+</html>
