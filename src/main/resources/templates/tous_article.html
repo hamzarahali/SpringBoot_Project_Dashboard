@@ -1,14 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1"/>
-<title>tous articles </title>
-<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
-<link rel="stylesheet" type="text/css" th:href="@{/css/marge.css}"/>
-</head>
-<body>
+<!--  HEADER  -->
+		<div th:replace="includes/header :: header"></div>
 
-	<h1> ajout avec succée </h1>
+		<div class="container marges">
+	
+	<table th:each="a:${liste}" >
+		
+			<tr >
+			<td ><img src="th:text="${a.img}""></td>
+			<td th:text="${a.description}"></td>
+			</tr>
+			<tr >
+			<td ></td>
+			<td th:text="${a.price}"></td>
+			</tr>
+		
+		<tr >
+			<td ><input type="submit" class="form-control" value="Ajouter"></td>
+			<td ></td>
+			</tr>
+	</table>
+	
+	</div>
 
-</body>
-</html>
+<!--  FOOTER  -->
+	<div th:replace="includes/footer :: footer"></div>
