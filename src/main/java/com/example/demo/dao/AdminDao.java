@@ -13,9 +13,5 @@ import com.example.demo.entites.Article;
 
 public interface AdminDao extends JpaRepository<Article, Long> {
 
-	List<Article> findByTitle(String title);
-	Optional<Article> findById(Long id);
-	Page<Article> finByTitle(String title,Pageable p);
-	Page<Article> findAll(Pageable p);
 	
 }

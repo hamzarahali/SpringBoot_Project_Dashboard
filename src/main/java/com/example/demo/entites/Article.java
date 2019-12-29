@@ -12,9 +12,7 @@ import lombok.*;
 @NoArgsConstructor
 
 
-public class Article {
-	
-
+public class Article {	
 
 	@Id
 	@GeneratedValue
