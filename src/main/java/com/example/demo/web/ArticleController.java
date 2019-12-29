@@ -22,6 +22,13 @@ public class ArticleController {
 	@Autowired
 	AdminDao ad;
 	
+	@RequestMapping ( value = "/liste" , method = RequestMethod.GET) 
+	public String ListView ( Model m ) {
+		List liste = (List) ad.findAll();
+		m.addAttribute("liste", liste);
+		return "tous_article";
+	}
+	
 	@RequestMapping(value="/ajout",method=RequestMethod.GET)
 	public String ajoutArticle(Model model) {
 		
@@ -40,5 +47,5 @@ public class ArticleController {
 		
 	}
 	
-
+	
 }

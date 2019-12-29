@@ -14,7 +14,7 @@
 	<table th:each="a:${liste}" >
 		
 			<tr >
-			<td ><img src="th:text="${a.img}""></td>
+			<td ><img th:src="@{'/images/' + ${a.img}}"></td>
 			<td th:text="${a.description}"></td>
 			</tr>
 			<tr >

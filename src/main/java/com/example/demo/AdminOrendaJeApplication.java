@@ -16,7 +16,7 @@ public class AdminOrendaJeApplication {
 		AdminDao ar = ctx.getBean(AdminDao.class);
 		
 		Article art = new Article("STAR ONE Four Electrique","STAR ONE Four Electrique - 36 Litres - Silver - Garantie 1 an\n" + 
-				"Marque: STAR ONE | Produits similaires par STAR ONE","88 TND","C:\\Users\\SYRINE\\git\\img\\four.jpg");
+				"Marque: STAR ONE | Produits similaires par STAR ONE","88 TND","four.jpg");
 		ar.save(art);
 	
 	
