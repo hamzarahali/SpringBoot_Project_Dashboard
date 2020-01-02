@@ -8,9 +8,10 @@
 
 </head>
 <body>
-
+<!--  HEADER  -->
+	<div th:replace="includes/header :: header"></div>
 <h1> <center> Ajout d'un article </center></h1>
-
+<div class="container ">
 <form th:action="@{sauver}" method="POST" th:object="${article}">
 
 <div class="marges col-md-3">
@@ -45,6 +46,9 @@
 </div>
 
 </form>
-
+</div>
+<!--  FOOTER  -->
+	<div th:replace="includes/footer :: footer"></div>
+</body>
 </body>
 </html>

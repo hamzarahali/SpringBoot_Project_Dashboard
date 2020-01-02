@@ -1,34 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8"/>
-<title>Liste des articles</title>
-<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
-<link rel="stylesheet" type="text/css" th:href="@{/css/marge.css}"/>
 
-</head>
-<body>
+<!--  HEADER  -->
+	<div th:replace="includes/header :: header"></div>
 
-		<div class="container marges">
+<form  method="POST" >
+<br><br><br>
+<h1> <center>Liste des articles</center></h1>
+
+		<div class="container ">
+		<table class="table table-striped" >
+	<th>TITLE</th><th>IMAGE</th><th>PRICE</th><th></th><th></th>
 	
-	<table th:each="a:${liste}" >
 		
-			<tr >
-			<td ><img th:src="@{'/images/' + ${a.img}}"></td>
-			<td th:text="${a.description}"></td>
-			</tr>
-			<tr >
-			<td ></td>
-			<td th:text="${a.price}"></td>
-			</tr>
+		<tr th:each="a:${liste}">
+			<td th:text="${a.title}"></td>
+			<td><img th:src="@{'/images/' + ${a.img}}" width="100px" ></td>
+			<td th:text="${a.price}">
+			<td ><a th:text="Modifier..."class="btn btn-primary" th:href="@{afficher(id_article=${a.id})}"/></td>
+			<td ><a th:text="Supprimer..." class="btn btn-danger" th:href="@{suppression(id_article=${a.id})}"/></td>
+			</td>
+	
+		</tr>
+	
+			
 		
-		<tr >
-			<td ><input type="submit" class="form-control" value="Ajouter"></td>
-			<td ></td>
-			</tr>
 	</table>
 	
 	</div>
-
+</form>
+<!--  FOOTER  -->
+	<div th:replace="includes/footer :: footer"></div>
 </body>
 </html>
