@@ -12,25 +12,31 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.dao.AdminDao;
+import com.example.demo.dao.DaoClient;
 import com.example.demo.entites.Article;
 
 
 
 
 @Controller
-@RequestMapping(value="/articles")
+@RequestMapping(value="/admin_article")
 
 public class ArticleController {
 	
 	@Autowired
 	AdminDao ad;
 	
+
+	
+	/*liste des articles*/
 	@RequestMapping ( value = "/liste" , method = RequestMethod.GET) 
 	public String ListView ( Model m ) {
 		List liste = (List) ad.findAll();
 		m.addAttribute("liste", liste);
 		return "tous_article";
 	}
+	
+	
 	@RequestMapping ( value = "/all" , method = RequestMethod.GET) 
 	public String List ( Model m ) {
 		List liste = (List) ad.findAll();

@@ -30,35 +30,41 @@ public class Article {
 	@Column(name="img")
 	private String img;
 	
+	@Column ( name = "category" ) 
+	private String cat ; 
+	
 	
 	public Article() {
 		super();
 	}
 	
-public Article(Long id,String title,String description,String price,String img) {
-		
+	public Article(Long id, String title, String desc, String prix, String img, String cat) {
 		super();
-		
-		this.id=id;
-		this.title=title;
-		this.description=description;
-		this.price=price;
-		this.img=img;
-		
+		this.id = id;
+		this.title = title;
+		this.description = desc;
+		this.price = prix;
+		this.img = img;
+		this.cat = cat;
 	}
-	
-public Article(String title,String description,String price,String img) {
-		
-		super();
-		
-		this.title=title;
-		this.description=description;
-		this.price=price;
-		this.img=img;
-		
-	}
+public Article(String title, String desc, String prix, String img, String cat) {
+	super();
+	this.title = title;
+	this.description = desc;
+	this.price = prix;
+	this.img = img;
+	this.cat = cat;
+}
 
 
+
+public String getCat() {
+	return cat;
+}
+
+public void setCat(String cat) {
+	this.cat = cat;
+}
 
 public Long getId() {
 	return id;
