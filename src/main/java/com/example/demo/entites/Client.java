@@ -12,8 +12,6 @@ import lombok.*;
 @Table ( name = "client" )
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 
 
 public class Client implements Serializable{

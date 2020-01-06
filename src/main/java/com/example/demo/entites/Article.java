@@ -8,8 +8,7 @@ import lombok.*;
 @Table(name="articles")
 @Getter 
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
+
 
 
 public class Article {	
@@ -20,8 +19,9 @@ public class Article {
 	
 	@Column(name="title")
 	private String title;
+	@Column(name="description" , columnDefinition = "TEXT")
 	
-	@Column(name="description")
+	
 	private String description;
 	
 	@Column(name="price")
