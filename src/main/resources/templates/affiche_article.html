@@ -2,9 +2,9 @@
 <html xmlns:th=“http://www.thymeleaf.org”>
 <!--  HEADER  -->
 	<div th:replace="includes/header :: header"></div>
-<h1> <center> Ajout d'un article </center></h1>
+<h1> <center> Modification d'un article </center></h1>
 <div class="container ">
-<form th:action="@{sauver}" method="POST" th:object="${article}">
+<form th:action="@{modifier}" method="POST" th:object="${article}">
 
 <div class="marges col-md-3">
 
@@ -13,21 +13,14 @@
 <input type="text" size="20" th:field="*{title}"  class="form-control"/>
 </div>
 
-<div class="form-group">
-<select class=form-control>
- <option >Catégorie</option>
- <option >Electroménager</option>
- <option >Hi-Fi</option>
-</select>
-</div>
+
 
 <div class="file-field">
-<div class="btn btn-primary btn-sm float-left">
-<span>Choose image</span>
+<div class="btn btn-success btn-sm float-left">
+<span>Update image</span>
 <input type="file" th:field="*{img}" >
 </div>
 </div>
-
 
 <div class="form-group">
 <label class="control-label"> Description : </label>
@@ -40,15 +33,18 @@
 </div>
 
 <div>
-<input type="submit" class="form-control" value="Ajouter">
+<input type="submit" class="form-control" value="Modifier">
 </div>
 
 </div>
 
 </form>
 </div>
+
 <!--  FOOTER  -->
 	<div th:replace="includes/footer :: footer"></div>
 </body>
 </body>
+
+
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th=“http://www.thymeleaf.org”>
+<!--  HEADER  -->
+	<div th:replace="includes/header :: header"></div>
+
+<form  method="POST" >
+<br><br><br>
+<h1> <center>Liste des clients</center></h1>
+
+		<div class="container ">
+		<table class="table table-striped" >
+	<th>FIRST_NAME</th><th>LAST_NAME</th><th>ADRESS</th><th>EMAIL</th><th></th>
+	
+		
+		<tr th:each="c:${liste}">
+			<td th:text="${c.fname}"></td>
+			<td th:text="${c.lname}"></td>
+			<td th:text="${c.adress}"></td>
+			<td th:text="${c.email}"></td>
+			
+			<td ><a th:text="Supprimer..." class="btn btn-danger" th:href="@{suppression(id_client=${c.id})}"/></td>
+			</td>
+	
+		</tr>
+	
+			
+		
+	</table>
+	
+	</div>
+</form>
+<!--  FOOTER  -->
+	<div th:replace="includes/footer :: footer"></div>
+</body>
+</html>

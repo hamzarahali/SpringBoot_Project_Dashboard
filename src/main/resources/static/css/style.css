@@ -1,0 +1,33 @@
+.header{
+	background: black;
+	height: 100px;
+
+
+}
+.footer{
+	background: black;
+	height: 200px;
+}
+.menu{
+	float: right;
+}
+
+.menu a {
+	color: #838382;
+	margin-right: 10px;
+
+}
+
+.menu a:hover {
+	color: white; 
+}
+.Copyright{
+	text-align: center;
+}
+.separateur{
+	height: 1px;
+	width:50%;
+	box-shadow: none;
+	border: none;
+	background-color: #f5b341 ;
+}
